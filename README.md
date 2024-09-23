@@ -8,3 +8,7 @@ We explore patterns, regularities, and correlations in the evolving landscape of
 ## Code
 
 TBD
+
+## Data
+
+The precise data to run the experiment will be made available under requests. Please write to francesco.decollibus@business.uzh.ch 
