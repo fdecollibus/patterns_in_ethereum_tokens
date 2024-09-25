@@ -16,8 +16,13 @@ For this paper, ethereum-etl tool has been used. You have two options:
 
 In any case after you extracted the data, you will need to aggregate them using the token_address column.
 
+### Sample Data
+For convenience in order to test and run the script, two very small samples are provided, from block 18900000 to 18900100. The real data used for the paper should be almost 1 tb.
++ sample_data/sample_block_transfer.csv with the token transfers for this 100 blocks 
++ sample_data/sample_block_timestamp.csv with the pertaining block to timestamp mapping
 
 ## Code
+The code assume a fixed folder structure, where tokens are handled in a folder called "token_data", change everything accordingly
 
 
 
