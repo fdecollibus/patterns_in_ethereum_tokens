@@ -31,7 +31,7 @@ Assuming you have a token_transfer.csv file, you first need to prepare your data
 3. Run *3_create_dictionary.py*: it will create a dictionary file for the tokens, to be referenced when populating arrays in the following steps
 
 ### Second step: networks and Jaccard index
-1. Run 4_create_sets_for_jaccard.py: this will create sets of edges and nodes pro tokens for further usage in the jaccard index
+1. Run *4_create_sets_for_jaccard.py*: this will create sets of edges and nodes pro tokens for further usage in the jaccard index
 
 
 
