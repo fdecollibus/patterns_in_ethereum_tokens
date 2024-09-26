@@ -20,6 +20,9 @@ In any case after you extracted the data, you will need to aggregate them using 
 For convenience in order to test and run the script, two very small samples are provided, from block 18900000 to 18900100. The real data used for the paper should be almost 1 tb.
 + sample_data/sample_block_transfer.csv with the token transfers for this 100 blocks 
 + sample_data/sample_block_timestamp.csv with the pertaining block to timestamp mapping
++ sample_data/dictionary_token_red.pickle a reduced dictionary of only the tokens that have been used in the analysis. They are used in some scripts.
++ sample_data/cumsum_results_cs.npz.zip this file is used for rank calculation. Remember to unzip before usage.
++ sample_data/overall_count_lines.npy.zip this file is used for power law fits (see the jupyter notebook). Remember to unzip before usage.
 
 ## Code
 The code assume a fixed folder structure, where tokens are handled in a folder called "token_data", change everything accordingly. Install the requirements as in requirements.txt
@@ -31,7 +34,14 @@ Assuming you have a token_transfer.csv file, you first need to prepare your data
 3. Run *3_create_dictionary.py*: it will create a dictionary file for the tokens, to be referenced when populating arrays in the following steps
 
 ### Second step: networks and Jaccard index
-1. Run *4_create_sets_for_jaccard.py*: this will create sets of edges and nodes pro tokens for further usage in the jaccard index
+1. Run *4_create_network_sets_for_jaccard.py*: this will create sets of edges and nodes pro tokens for further usage in the jaccard index
+
+### Third step: prepare daily time series for new daily transactions
+1. Run *5_prepare_tx_time_series.py*
+2. Run *6_setup_tx_time_series.py*
+3. Run *7_run_tx_time_series.py*
+4. 
+
 
 
 
