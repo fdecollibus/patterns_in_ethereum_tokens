@@ -22,7 +22,17 @@ For convenience in order to test and run the script, two very small samples are 
 + sample_data/sample_block_timestamp.csv with the pertaining block to timestamp mapping
 
 ## Code
-The code assume a fixed folder structure, where tokens are handled in a folder called "token_data", change everything accordingly
+The code assume a fixed folder structure, where tokens are handled in a folder called "token_data", change everything accordingly. Install the requirements as in requirements.txt
+
+### First step: preparing your data
+Assuming you have a token_transfer.csv file, you first need to prepare your data. Adapt the path and the folders in the script files accordingly
+1. Run *1_recompose_token.py*: this script will split the token transfers throughout different folders pro token addresses. The transfers will still be unordered
+2. Run *2_sort_files.py*: this script will sort the token transfers in every subfolder.
+3. Run *3_create_dictionary.py*: it will create a dictionary file for the tokens, to be referenced when populating arrays in the following steps
+
+### Second step: networks and Jaccard index
+1. Run 4_create_sets_for_jaccard.py: this will create sets of edges and nodes pro tokens for further usage in the jaccard index
+
 
 
 
