@@ -1,16 +1,16 @@
 # Patterns and Centralisation in Ethereum Based Token Transaction Networks
 
-Repository with the code from the paper "Patterns and Centralisation in Ethereum Based Token Transaction Networks", which is currently under submission process.
+Repository with code from the paper "Patterns and Centralisation in Ethereum Based Token Transaction Networks", which is currently under review.
 
 ## Article Abstract
 We explore patterns, regularities, and correlations in the evolving landscape of Ethereum based tokens, both ERC-20 (fungible) and ERC-721 (non fungible) with the aim of understanding the factors contributing to the rise of certain tokens over others. By applying network science methodologies, minimum spanning trees, econometric ARMA models, and the study of accumulation processes we are able to highlight a rising centralisation process. Not only ``rich" tokens get richer, but past transactions also emerge as more reliable predictors of new transactions. Our findings are validated across different samples of tokens.
 
 ## Data
 
-The precise data to run the experiment will be made available under requests. Please write to francesco.decollibus@business.uzh.ch 
-For token transfer the order to be followed 
+The exact data to run to repeat the experiments can be made available under request. Please contact francesco.decollibus@business.uzh.ch 
+
 ### Extract Token Transfers
-For this paper, ethereum-etl tool has been used. You have two options:
+It is possible to independently collect the data used in this paper. For this paper, ethereum-etl tool has been used. You have two options:
 1. Download the [Dataset](https://cloud.google.com/blog/products/data-analytics/introducing-six-new-cryptocurrencies-in-bigquery-public-datasets-and-how-to-analyze-them)  directly from [Google Cloud](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=crypto_ethereum&page=dataset). 
 2. Run a fully synchronized Ethereum Node, download [ethereum-etl](https://github.com/blockchain-etl/ethereum-etl) tool and run the [*extract_token_transfers*](https://ethereum-etl.readthedocs.io/en/latest/commands/#extract_token_transfers)  method. 
 
@@ -21,8 +21,10 @@ For convenience in order to test and run the script, two very small samples are 
 + sample_data/sample_block_transfer.csv with the token transfers for this 100 blocks. Sample data.
 + sample_data/sample_block_timestamp.csv with the pertaining block to timestamp mapping. Sample data.
 + sample_data/dictionary_token_red.pickle a reduced dictionary of only the tokens that have been used in the analysis. They are used in some scripts.
-+ sample_data/cumsum_results_cs.npz.zip this file is used for rank calculation. This is the real file used in the paper. Remember to unzip before usage. 
-+ sample_data/overall_count_lines.npy.zip this file is used for power law fits (see the jupyter notebook). This is the real file used in the paper. Remember to unzip before usage.
+
+We included as well two complete data sets from the paper:
++ sample_data/cumsum_results_cs.npz.zip this file is used for rank calculation. Remember to unzip before usage. 
++ sample_data/overall_count_lines.npy.zip this file is used for power law fits (see the jupyter notebook). Remember to unzip before usage.
 
 ## Code
 The code assume a fixed folder structure, where tokens are handled in a folder called "token_data", change everything accordingly. Install the requirements as in requirements.txt
